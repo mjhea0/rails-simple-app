@@ -21,7 +21,7 @@ Model-Controller Setup
 - Double check that your data was added using the SQLite Database Browser
 - Create these blank web pages under app/views/post: index.html.erb
 - Update: *rake db:migrate*
-- Update route.rb in Sublime:
+- Update route.rb in Sublime (the routes fille is used to dispath incoming urls and match them to the controller or action)
 
         root :to => "post#index"
         resources :post
