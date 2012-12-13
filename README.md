@@ -19,7 +19,7 @@ Model-Controller Setup
 - Add a row to the database: *Post.create({url:"http://www.google.com", title:"Google"})*
 - Add a few more …
 - Double check that your data was added using the SQLite Database Browser
-- Create these blank web pages under app/views/post: index.html.erb
+- Create this blank web page under app/views/post: index.html.erb
 - Update: *rake db:migrate*
 - Update route.rb in Sublime (the routes fille is used to dispath incoming urls and match them to the controller or action)
 
