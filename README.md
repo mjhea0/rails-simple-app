@@ -42,13 +42,10 @@ Model-Controller Setup
         <br/>
         <h1>All Posts</h1>
         <% @posts.each do |post| %>
-        <tr>
-            <td><%= post.title %></td>
-            <td><%= link_to 'Show', post %>
-        </td>
-        <br/>
-        </tr>
+        <li>
+         	<%= link_to post.title, post.url %>
+        </li>
         <% end %>
         <br />
-
+        
 - Refresh http://localhost:3000/ - you should see your links
