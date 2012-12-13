@@ -1,4 +1,4 @@
-Link Directory App
+Link Directory App (part 1)
 =================
 
 Download the basic starter project (includes Twitter Bootstrap), unpack, and place in the files in folder of choice
