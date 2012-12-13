@@ -25,39 +25,37 @@ Model-Controller Setup
 
         root :to => "post#index"
         resources :post
-- Update Controller:
-- Open /app/controllers/post_controller.rb in Sublime and replace code with:
+        
+- Update /app/controllers/post_controller.rb in Sublime. Replace code with:
 
-class PostController < ApplicationController
-def index
-@posts = Post.all
- 	end
- 	def show
-		@post = Post.find(params[:id])
-	end
-end
+            class PostController < ApplicationController
+                def index
+                    @posts = Post.all
+                end
+                def show
+                    @post = Post.find(params[:id])
+                end
+            end
 
-8.	Update views
-a.	Update /app/views/post/index.html.erb
+- Update /app/views/post/index.html.erb with:
 
-<br/>
-<h1>All Posts</h1>
+        <br/>
+        <h1>All Posts</h1>
+        <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.title %></td>
+            <td><%= link_to 'Show', post %>
+        </td>
+        <br/>
+        </tr>
+        <% end %>
+        <br />
 
-<% @posts.each do |post| %>
- <tr>
- <td><%= post.title %></td>
-    <td><%= link_to 'Show', post %></td><br/>
-  </tr>
-<% end %>
-</table>
+- Update /app/views/posts/show.html.erb with
 
-<br />
+        <br/>
+        <p><b><%= @post.title %></b></p>
+        <p><%= @post.url %></p>
+        <%= link_to "Back", post_path %>
 
-b.	Update /app/views/posts/show.html.erb
-
-<br/>
-<p><b><%= @post.title %></b></p>
-<p><%= @post.url %></p>
-<%= link_to "Back", posts_path %>
-
-9.	Refresh http://localhost:3000/ - you should see your links
+- Refresh http://localhost:3000/ - you should see your links
