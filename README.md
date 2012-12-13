@@ -11,7 +11,7 @@ Create new application
 
 Model-Controller Setup
 ----------------------
-- Update Gems: *bundle update*
+- Update Gems: *bundle install*
 - Create Model: *rails generate model Post url:string title:string*
 - Create Controller: *rails generate controller Post new*
 - Create the database: *rake db:migrate*
