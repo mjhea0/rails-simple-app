@@ -19,7 +19,7 @@ Model-Controller Setup
 - Add a row to the database: *Post.create({url:"http://www.google.com", title:"Google"})*
 - Add a few more …
 - Double check that your data was added using the SQLite Database Browser
-- Create these blank web pages under app/views/post: index.html.erb and show.html.erb
+- Create these blank web pages under app/views/post: index.html.erb
 - Update: *rake db:migrate*
 - Update route.rb in Sublime:
 
@@ -50,12 +50,5 @@ Model-Controller Setup
         </tr>
         <% end %>
         <br />
-
-- Update /app/views/posts/show.html.erb with
-
-        <br/>
-        <p><b><%= @post.title %></b></p>
-        <p><%= @post.url %></p>
-        <%= link_to "Back", post_path %>
 
 - Refresh http://localhost:3000/ - you should see your links
