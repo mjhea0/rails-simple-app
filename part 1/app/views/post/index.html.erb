@@ -2,11 +2,12 @@
 <h1>All Posts</h1>
 
 <% @posts.each do |post| %>
+
  <tr>
  <td><%= post.title %></td>
     <td><%= link_to 'Show', post %></td><br/>
   </tr>
 <% end %>
-</table>
+
 
 <br />
