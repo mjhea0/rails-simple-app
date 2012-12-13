@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,6 +23,23 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+
+group :assets do
+  gem 'less-rails', '~> 2.2.5'
+
+  gem 'therubyracer', :require => 'v8'
+
+
+  # just put after rails asset defaults
+  gem 'twitter-bootswatch-rails', '~> 2.2.1.0'
+end
+
+# View Helpers Gem can go outside the assets group
+gem 'twitter-bootswatch-rails-helpers'
+
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
