@@ -1,4 +1,4 @@
-Link Directory App (part 1)
+Link Directory App (part 1)- setup 
 =================
 
 Download the basic starter project (includes Twitter Bootstrap), unpack, and place in the files in folder of choice
@@ -49,3 +49,8 @@ Model-Controller Setup
         <br />
         
 - Refresh http://localhost:3000/ - you should see your links
+
+Link Directory App (part 2) - Active Record Associations
+=================
+
+
