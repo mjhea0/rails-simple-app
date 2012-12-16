@@ -1,11 +1,8 @@
 <br/>
 <h1>All Posts</h1>
-
 <% @posts.each do |post| %>
- 	<li>
- 		<%= link_to post.title, post.url %>
- 	</li>
+<li>
+<%= link_to post.title, post.url %>
+</li>
 <% end %>
-
-
 <br />
