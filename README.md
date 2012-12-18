@@ -151,7 +151,52 @@ Now we need to update the *Show* page to add the total comments and a listing of
 - Next time I'll show you how to add some CSS styling.
 
 
+Link Directory App (part 3) - Styling
+=================
 
+Okay - let's add in some basic styling to make this look a little better. Since this project includes the Twitter Bootstrap, I'll just be using [Bootswatch](http://bootswatch.com/) to change the CSS styling. 
+
+Now, if you're like me and don't do much designing, you can just look at the CSS for one of the style templates and copy the entire stylesheet and paster it to application.css.scss.
+
+I then added a margin to the top of the conatiner class so that the text *Navigation* is easier to read:
+
+	.container,
+	.navbar-static-top .container,
+	.navbar-fixed-top .container,
+	.navbar-fixed-bottom .container {
+ 	 margin-top:13px;
+ 	 width: 940px;
+	}
+
+Next I updated index.html.erb to make the logical layout of posts and comments look a bit nicer:
+
+	.container,
+	.navbar-static-top .container,
+	.navbar-fixed-top .container,
+	.navbar-fixed-bottom .container {
+	  margin-top:13px;
+	  width: 940px;
+	}
+
+Finally I updated show.html.erb to, again, make the logical layout look a little nicer:
+
+<br/>
+<h1>Link</h1>
+<br />
+<%= link_to @post.title, @post.url %> (<%= @post.comments.count %> comment)<br />
+
+
+	<ul>
+	<% @post.comments.each do |comment| %>
+			
+			<li>
+				<%= comment.content %>
+			</li>
+		
+	<% end %>
+	</ul>
+	
+	<%= link_to "Back to the Directory", "/" %>
 
 
 

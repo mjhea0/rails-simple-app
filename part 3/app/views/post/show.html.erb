@@ -1,0 +1,21 @@
+<br/>
+<h1>Link</h1>
+<br />
+<%= link_to @post.title, @post.url %> (<%= @post.comments.count %> comment)<br />
+
+
+<ul>
+<% @post.comments.each do |comment| %>
+		
+		<li>
+			<%= comment.content %>
+		</li>
+	
+<% end %>
+</ul>
+
+<%= link_to "Back to the Directory", "/" %>
+
+
+
+
