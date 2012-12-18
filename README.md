@@ -156,7 +156,7 @@ Link Directory App (part 3) - Styling
 
 Okay - let's add in some basic styling to make this look a little better. Since this project includes the Twitter Bootstrap, I'll just be using [Bootswatch](http://bootswatch.com/) to change the CSS styling. 
 
-Now, if you're like me and don't do much designing, you can just look at the CSS for one of the style templates and copy the entire stylesheet and paster it to application.css.scss.
+Now, if you're like me and don't do much designing, you can just look at the CSS for one of the style templates and copy the entire stylesheet and paste it to application.css.scss.
 
 I then added a margin to the top of the conatiner class so that the text *Navigation* is easier to read:
 
@@ -180,32 +180,15 @@ Next I updated index.html.erb to make the logical layout of posts and comments l
 
 Finally I updated show.html.erb to, again, make the logical layout look a little nicer:
 
-<br/>
-<h1>Link</h1>
-<br />
-<%= link_to @post.title, @post.url %> (<%= @post.comments.count %> comment)<br />
-
-
+	<br/>
+	<h1>Link</h1>
+	<br />
+	<%= link_to @post.title, @post.url %> (<%= @post.comments.count %> comment)<br />
 	<ul>
-	<% @post.comments.each do |comment| %>
-			
-			<li>
-				<%= comment.content %>
-			</li>
-		
-	<% end %>
+		<% @post.comments.each do |comment| %>
+		<li>
+			<%= comment.content %>
+		</li>
+		<% end %>
 	</ul>
-	
 	<%= link_to "Back to the Directory", "/" %>
-
-
-
-
-
-
-
-
-
-
-
-
